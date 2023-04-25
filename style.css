@@ -1,0 +1,176 @@
+
+
+:root{
+    --dark:#374151;
+    --darker:#1f2937;
+    --darkest:#111827;
+    --light:#EEE;
+    --pink:#EC4899;
+    --purple:#885cf6;
+    --gray:#687280;
+}
+
+*{
+    margin:0;
+    font-family: cursive;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: var(--dark);
+    color: white;
+}
+
+
+/* header */
+
+header{
+    text-align: center;
+    padding: 1rem 0.5rem;
+    max-width: 600px;
+    width:100%;
+    margin:0 auto;
+}
+
+header h1 , .task-list h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.task-form{
+    padding: 0 0.3rem;
+    display:flex;
+}
+
+
+input, button{
+    outline:none;
+    background: none;
+    border:none;
+}
+
+
+#new-task{
+    flex:1 1 0%;
+    color:var(--light);
+    background-color: var(--darker);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-right: 0.8rem;
+    font-size: 1.25rem;
+}
+
+#new-task::placeholder{
+    color: var(--gray);
+}
+
+#new-task:hover{
+    box-shadow: 0 0 1rem rgb(229, 236, 239);
+}
+
+#task-submit{
+   font-size: 1.6rem;
+   color:var(--pink);
+   padding: 0.7rem;
+   border-radius: 2rem;
+   font-weight:bold;
+   background-image: linear-gradient(90deg ,var(--pink) , var(--purple));
+   -webkit-background-clip: text;
+   background-clip: var();
+   -webkit-text-fill-color: transparent;
+   transition: 4ms;
+   cursor: pointer;
+}
+
+#task-submit:hover{
+    background-image: linear-gradient(90deg ,var(--purple) , var(--pink));
+   -webkit-background-clip: text;
+   background-clip:var();
+   -webkit-text-fill-color: transparent;
+   box-shadow: 0 0 1rem rgb(229, 236, 239);
+   opacity: 0.8;
+}
+
+.new-task:hover , .task-submit:hover{
+    box-shadow: 0 0 1rem rgb(229, 236, 239);
+}
+
+main{
+    flex:1 1 0%;
+    padding: 1rem 0.5rem;
+    max-width: 600px;
+    width:100%;
+    margin:0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+}
+
+.tasks .task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darkest);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tasks .task .content{
+    flex: 0.8 0.8 0%;
+    /* border-radius: 2REM; */
+
+}
+
+.tasks .task .content .text{
+    color:var(--light);
+    font-size: 1.25rem;
+    width:100%;
+    display: block;
+    /* transition: 3ms; */
+}
+
+.tasks .task .content .text:not(:read-only){
+    color:var(--purple);
+}
+
+.tasks .task .controls{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .controls button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.225rem;
+    font-weight: 700;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.task .controls .edit{
+    background-image: linear-gradient(90deg ,var(--pink) , var(--purple));
+    background-clip:var();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 2px;
+}
+
+.task .controls .delete{
+    background-image: linear-gradient(90deg ,red , var(--purple));
+    -webkit-background-clip: text;
+    background-clip:var();
+    -webkit-text-fill-color: transparent;
+}
+
+
+.task .controls button:hover{
+    opacity: 0.6;
+}
+
